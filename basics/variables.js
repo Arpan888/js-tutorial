@@ -8,3 +8,5 @@ console.log(accountId);
 accountCity = "Jaipur";
 
 console.table([accountEmail,accountId,accountpass,accountCity]);
+
+// prefer not to use var because it is a global scope variable.
