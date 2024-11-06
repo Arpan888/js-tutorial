@@ -41,7 +41,7 @@ console.log(Math.max(23,56,87,9));
 
 console.log(Math.random());
 
-console.log((Math.random()*10)+1);
+console.log((Math.random()*100)+1);
 // to get precise value we can wrap it up with floor.
 
 console.log(Math.floor(Math.random()*10)+1); // it will give precise value.
