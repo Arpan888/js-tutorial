@@ -1,0 +1,35 @@
+.color{
+   
+    padding: 20px;
+    text-align: center;
+    line-height: normal;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 50px;
+   cursor: cell;
+   border-radius: 12px;
+}
+
+#grey{
+    background-color: grey;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#purple{
+    background-color: purple;
+}
+#brown{
+    background-color: brown;
+}
+
+nav{
+    cursor: pointer;
+    padding: 12px;
+}
+.navbar{
+    background-color: silver;
+}
