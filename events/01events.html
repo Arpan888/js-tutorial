@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="event">
+        <ul>
+            <li><button class="one">button1</button></li>
+            <li><button class="two">button2</button></li>
+        </ul>
+
+        <ul class="example">
+            <li><button>button3</button></li>
+            <li><button>button4</button></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // js events run in a sequence manner
+    // but browser events are async
+    document.querySelector(".two").onclick = function(){
+       alert("button two clicked")
+    }
+    // but this method is not preffered because it can create some problem we dpnt get much information that is why we should
+    // we should use evntlisterner they provide functionality + propagation
+  
+    /*  type (mouse,key board)
+    timestamp
+    defaultprevent
+    taregt
+    toelement
+    src element
+    current target
+    client x y 
+    screen x y
+    alt key
+    ctrl key
+    shift key
+    key code*/
+
+    // event propagation -  2 context(event bubbling and event capturing(top to bottom))
+    // false - event bubbling which is mostly used.
+    document.querySelector(".event").addEventListener('click',function(e){
+        console.log('clickred inside the div');
+        
+
+    })
+    document.querySelector(".one").addEventListener('click',function(e){
+console.log("clicked inside div on button 1");
+e.stopPropagation()
+
+    })
+    //stopPropagation we can stop the event bubbling and event capturing.
+    // click on the l1 and they get remove after the click
+    document.querySelector(".example").addEventListener('click',function(e){
+
+e.stopPropagation()
+if(e.target.tagName === "li"){
+    let remove = e.target.parentNode
+remove.remove()
+  }
+ })
+
+
+</script>
+</html>
