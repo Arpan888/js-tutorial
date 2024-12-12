@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Hello my name is Arpan</h1>
+    <button class="start">Start</button>
+    <button class="stop">stop</button>
+    
+</body>
+<script>
+    let abd;
+    let start = function(){
+        date = new Date()
+        console.log("Arpan",date.toLocaleTimeString());
+        
+    }
+
+  document.querySelector('.start').addEventListener('click',function(){
+    console.log("START");
+    abd = setInterval(start,2000)
+    
+  })
+
+  document.querySelector('.stop').addEventListener('click',function(){
+    console.log("Stopped");
+    clearInterval(abd)
+    
+  })
+</script>
+</html>
