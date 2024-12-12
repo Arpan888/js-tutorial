@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Chai Aur code</h1>
+    <button>Stop</button>
+    
+</body>
+<script>
+    setTimeout(function(){
+console.log("Arpan");
+
+    },3000)
+    // second way to do it.
+    let last = function(){
+        console.log("Chaudhary");
+        
+    }
+    setTimeout(last,3000)
+    // we can also change anythoing with this
+    let change = function(){
+        document.querySelector("h1").innerHTML = "Bj boi Varun"
+    }
+    setInterval(change,5000)
+let body = document.querySelector("body")
+    let add = function(){
+        let body = document.querySelector("body")
+        let p = document.createElement("p")
+        p.innerHTML = "Hello my name is bjboi varun from Sanjay prk"
+        body.append(p)
+       
+    }
+
+    let changeme = setInterval(add,5000)
+    document.querySelector('button').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("Stopped");
+        
+    })
+</script>
+</html>
